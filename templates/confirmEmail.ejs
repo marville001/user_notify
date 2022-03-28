@@ -1,69 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    *{
-      margin: 0px;
-    }
-    .wrapper{
-      width: 100%;
-      Margin: auto;
-      Padding-bottom: 50px;
-      Padding-top: 10px;
-    }
-    table,tr,td{
-      border-spacing: 0;
-    }
-    .login-btn{
-      background-color: #027d79;
-      color: #ffffff;
-      text-decoration: none;
-      Padding: 10px 20px;
-      font-size: 18px;
-    }
-  </style>
-</head>
-<body>
-  <table class="wrapper">
-    <tr>
-      <td >
-        <table width="600" style="margin: auto;">
-          <tr>
-            <td align="center" style="background-color: #027d79;padding: 15px;">
-              <p style="font-size: 30px;color: #ffffff;">User System</p>
-            </td>
-          </tr>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0px;
+            }
+            .wrapper {
+                width: 100%;
+                margin: auto;
+                padding-bottom: 50px;
+                padding-top: 10px;
+            }
+            table,
+            tr,
+            td {
+                border-spacing: 0;
+            }
+            .login-btn {
+                background-color: #027d79;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px 20px;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="wrapper">
+            <tr>
+                <td>
+                    <table width="600" style="margin: auto">
+                        <tr>
+                            <td
+                                align="center"
+                                style="background-color: #027d79; padding: 15px"
+                            >
+                                <p style="font-size: 30px; color: #ffffff">
+                                    User System
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 20px">
+                    <table width="600" style="margin: auto">
+                        <tr>
+                            <td>
+                                <h2 style="font-size: 18px">
+                                    Dear <%= name %>,
+                                </h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p
+                                    style="
+                                        color: black;
+                                        font-size: 16px;
+                                        margin: 10px 0px;
+                                        font-weight: 400;
+                                        max-width: 500px;
+                                    "
+                                >
+                                    Please click verify your email to finish
+                                    your registration process.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="600" style="margin: auto">
+                        <tr>
+                            <td>
+                                <a class="login-btn" href="<%= link %>"
+                                    >Confirm Email</a
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="600" style="margin: auto">
+                        <tr>
+                            <td>
+                                <p style="Margin: 20px 0px">
+                                    This is an automated message. Please do NOT
+                                    reply to this email
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Thanks</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
         </table>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 20px;">
-        <table width="600" style="Margin: auto;">
-          <tr>
-            <td>
-              <h2 style="font-size: 18px;">Dear <%= name %>,</h2>
-              <p style="color: black;font-size: 18px;Margin: 10px 0px;font-weight: 400;">Welcome to User System</p>
-              <p style="color: black;font-size: 16px;Margin: 10px 0px;font-weight: 400; max-width: 500px;">You have been added to the system and you can login using the link provided below and the username and password</p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <table width="600" style="margin: auto;">
-          <tr>
-            <td>
-              <a class="login-btn" href="<%= link %>">Confirm Email</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
+    </body>
 </html>
