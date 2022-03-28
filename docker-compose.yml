@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  
+  node:
+    container_name: user_notify
+    image: user_notify
+    build:
+      context: .
+      dockerfile: notify.dockerfile
+    ports:
+      - "9006:9006"
+      - "6009:6009"
+    networks:
+      - user_notify-network
+    volumes:
+      - ./logs:/var/www/logs
+
+networks:
+  user_notify-network:
+    driver: bridge
