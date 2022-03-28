@@ -8,6 +8,7 @@ services:
     build:
       context: .
       dockerfile: notify.dockerfile
+    
     ports:
       - "9006:9006"
       - "6009:6009"
