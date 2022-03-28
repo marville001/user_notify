@@ -1,0 +1,80 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Email notification Microservice",
+        "description": "This is a microservice for notifying users and sending emails",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:8000",
+    "basePath": "/api",
+    "tags": [
+        {
+            "name": "notify",
+            "description": "API for sending a notification"
+        }
+    ],
+    "schemes": ["https", "http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+        "/todos": {
+            "get": {
+                "summary": "Get all the tasks",
+                "description": "Get all the tasks",
+                "produces": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/todosResponse"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid status value",
+                        "schema": {
+                            "$ref": "#/definitions/InvalidResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "todosResponse": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "task": {
+                    "type": "string"
+                },
+                "assignee": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "InvalidResponse": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
